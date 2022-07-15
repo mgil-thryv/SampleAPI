@@ -3,6 +3,10 @@ from datetime import datetime
 
 app = FastAPI()
 
+@app.get("/hi")
+def current_datetime():
+    return {"message": "Hello! Your Dummy API is up and running!"}
+
 @app.get("/")
 def current_datetime():
     return {"datetime": datetime.now().strftime("%Y-%m-%d %H:%m:%s")}
