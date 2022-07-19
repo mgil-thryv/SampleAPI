@@ -7,6 +7,10 @@ app = FastAPI()
 def current_datetime():
     return {"message": "Hello! Your Dummy API is up and running!"}
 
+@app.get("/bye")
+def current_datetime():
+    return {"message": "Goodbye!"}
+
 @app.get("/")
 def current_datetime():
     return {"datetime": datetime.now().strftime("%Y-%m-%d %H:%m:%s")}
